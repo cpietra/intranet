@@ -1,0 +1,51 @@
+﻿@model intranet.Models.Procesos
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estás seguro que quieres eliminar esto?</h3>
+<div>
+    <h4>Procesos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Proceso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Proceso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numeral)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numeral)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Unidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Unidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fuente)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fuente)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_Proceso" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Volver a la Lista</a>
+    </form>
+</div>

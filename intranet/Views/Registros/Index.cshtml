@@ -1,0 +1,65 @@
+﻿@model IEnumerable<intranet.Models.Registros>
+
+@{
+    ViewData["Title"] = "Indice";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Insertar Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Periodo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numerador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Denominador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Indicador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcesoId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numerador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Denominador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indicador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcesoId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_Registro">ar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_Registro">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_Registro">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

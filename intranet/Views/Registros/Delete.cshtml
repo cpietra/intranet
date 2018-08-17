@@ -1,0 +1,57 @@
+﻿@model intranet.Models.Registros
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estás seguro que quieres eliminar esto?</h3>
+<div>
+    <h4>Registros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Periodo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Periodo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numerador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numerador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Denominador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Denominador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Indicador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Indicador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcesoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProcesoId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_Registro" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Volver a la Lista</a>
+    </form>
+</div>
